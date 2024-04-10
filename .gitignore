@@ -14,9 +14,6 @@ dist-ssr
 
 .env
 run.txt
-chat.png
-home.png
-Login.png
 
 # Editor directories and files
 .vscode/*
