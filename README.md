@@ -26,9 +26,8 @@ The application is deployed on [Render](https://zeeshan-mern-chat-app.onrender.c
 
 
 ![Login](Login.png)
-![Signup](Signup.png)
-![Home](Home.png)
-![Chat](Chat.png)
+![Home](home.png)
+![Chat](chat.png)
 
 ## Installation
 
