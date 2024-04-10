@@ -17,14 +17,12 @@ const protectRoute = async (req, res, next) => {
 
         // console.log(decoded);
 
-		const user = await User.findById(decoded.userID).select("-password");
+		const user = await User.findById(decoded.userId).select("-password");
 
 		if (!user) {
 			return res.status(404).json({ error: "User not found from protect routes" });
 		}
-
 		req.user = user;
-
 		next();
 	} catch (error) {
 		console.log("Error in protectRoute middleware: ", error.message);

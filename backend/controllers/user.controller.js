@@ -6,7 +6,13 @@ export const getUsersForSidebar = async (req, res)=>{
 
         const loggedInUserId = req.user._id;
 
-        const allUsers = await User.find({id : {$ne : loggedInUserId}}).select("-password");      // all users except the loggedin one
+        const allUsers = await User.find({_id : {$ne : loggedInUserId}}).select("-password");      // all users except the loggedin one
+        // console.log('------------------------------------------ Logged In --------------------------------------------------')
+        // console.log(loggedInUserId);
+
+        // console.log('------------------------------------------ All --------------------------------------------------')
+
+        // console.log(allUsers);
 
         res.status(200).json(allUsers);
 
